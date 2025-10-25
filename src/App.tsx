@@ -13,7 +13,7 @@ function App() {
       <h1>Úkolníček</h1>
       <Form />
       <hr />
-      <List title="úkoly, které fakt hoří:" items={tasks}/>
+      <List title="úkoly, které musím udělat:" items={tasks}/>
     </>
   )
 }
