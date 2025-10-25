@@ -7,7 +7,11 @@ export interface FormDataStructure {
     priority?: string;
 }
 
-export function Form () {
+export interface FormProps {
+    onFormSubmit: (data: FormDataStructure) => void;
+}
+
+export function Form ({onFormSubmit} : FormProps) {
   const [formData, setFormData] = useState<FormDataStructure>({
     title: '',
     description: '',
@@ -16,7 +20,7 @@ export function Form () {
 
   function handleSubmit(e : React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    console.log('odeslano', formData)
+    onFormSubmit(formData)    
   }
 
   function handleChange(e : React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
