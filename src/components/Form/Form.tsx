@@ -20,7 +20,12 @@ export function Form ({onFormSubmit} : FormProps) {
 
   function handleSubmit(e : React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    onFormSubmit(formData)    
+    onFormSubmit(formData)
+    setFormData({
+      title: '',
+      description: '',
+      priority: 'normal',
+    })    
   }
 
   function handleChange(e : React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {

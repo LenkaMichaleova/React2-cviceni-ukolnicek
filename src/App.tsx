@@ -22,9 +22,10 @@ function App() {
   return (
     <>
       <h1>Úkolníček</h1>
-      <Form onFormSubmit={handleFormSubmit}/>
       <hr />
       <List title="úkoly, které musím udělat:" items={tasks}/>
+      <hr />
+      <Form onFormSubmit={handleFormSubmit}/>
     </>
   )
 }
